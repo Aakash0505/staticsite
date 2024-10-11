@@ -64,7 +64,7 @@ def leadCreate(request):
                 send_mail(subject=subject, template_object=email_body, from_email=settings.FROM_EMAIL, to=[email_id], resume=None,
                     fail_silently=False)
                 # admin mail
-                send_mail(subject=subject_admin, template_object=email_body_admin, from_email=settings.FROM_EMAIL, to=['aakashagrawal552@gmail.com'], resume=resume,
+                send_mail(subject=subject_admin, template_object=email_body_admin, from_email=settings.FROM_EMAIL, to=['aakashagrawal552@gmail.com','aayush038@gmail.com'], resume=resume,
                     fail_silently=False)
         except Exception as e:
             print(e)
