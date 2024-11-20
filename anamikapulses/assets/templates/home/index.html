@@ -183,7 +183,7 @@
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
             {% for obj in category_obj %}
-            <li data-filter=".filter-{{obj.name}}">{{obj.name}}</li>
+            <li data-filter=".filter-{{obj.name|slugify}}">{{obj.name}}</li>
             {% endfor %}
             <!-- <li data-filter=".filter-product">Udad</li>
             <li data-filter=".filter-branding">Chana</li>
@@ -192,7 +192,7 @@
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
             {% for obj in product_obj %}
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{obj.category}}">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{obj.category|slugify}}">
               <div class="portfolio-content h-100">
                 <img src="{{obj.image.url}}" class="img-fluid" alt="{{obj.name}}">
                 <div class="portfolio-info">
